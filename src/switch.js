@@ -1,37 +1,87 @@
 document.querySelector('#header').innerHTML="estoy leyendo el documento"
 var fruta
 var mensaje
-var userInput =prompt("ingrese el sabor de su fruta")
+var userInput =prompt("ingrese el numero")
 
-function jugo_de_fresas() {
+function dias_semanaL() {
+    mensaje = "Lunes"
     document.querySelector('#header').innerHTML = mensaje;
   }
   
-  function jugo_de_naranja() {
-    mensaje = "batir naranjas y mandarinas"
+  function dias_semanaM() {
+    mensaje = "Martes"
     document.querySelector('#header').innerHTML = mensaje;
   }
 
   
-  
-  function servir_vaso_de_agua() {
-    mensaje = "servir vaso con agua"
+  function dias_semanaMi() {
+    mensaje = "Miercoles"
     document.querySelector('#header').innerHTML = mensaje
     }
 
+    function dias_semanaJ() {
+        mensaje = "Jueves"
+        document.querySelector('#header').innerHTML = mensaje
+    }
+        
+    function dias_semanaV() {
+        mensaje = "Viernes"
+        document.querySelector('#header').innerHTML = mensaje
+    }
 
- fruta = userInput.toLowerCase()
+    function dias_semanaS() {
+        mensaje = "Sabado"
+        document.querySelector('#header').innerHTML = mensaje
+    }
+
+
+    function dias_semanaD() {
+        mensaje = "Domingo"
+        document.querySelector('#header').innerHTML = mensaje
+    }
+
+
+    function Dia_no_valido() {
+        mensaje = "Dia invalido"
+        document.querySelector('#header').innerHTML = mensaje
+    }
+
+
+
+
+
+ fruta = parseInt(userInput)// con parseInt se convierte en entero
 
 switch(fruta) {
-    case "fresa":
-        mensaje = "batir fresas"
-        jugo_de_fresas()
+    case 1:
+        mensaje = "Lunes"
+        dias_semanaL()
      break
-     case "naranja":
-     case "mandarina":
-        jugo_de_naranja()
+     case 2:
+     mensaje = "Martes"
+        dias_semanaM()
         break
-        default:
-        servir_vaso_de_agua()
+        case 3:
+        mensaje = "Miercoles"
+        dias_semanaMi()
         break
+        case 4 :
+            mensaje = "Jueves"
+            dias_semanaJ()
+            break 
+            case 5:
+                mensaje = "Viernes"
+                dias_semanaV()
+                break
+                case 6 :
+                    mensaje = "Sabado"
+                    dias_semanaS()
+                    break
+                    case 7 :
+                        mensaje = "Domingo"
+                        dias_semanaD()
+                        break
+                        default:
+                            Dia_no_valido()
+
 }
