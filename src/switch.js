@@ -1,4 +1,4 @@
-document.querySelector('#header').innerHTML="estoy leyendo el documento"
+document.querySelector('#header').innerHTML="estoy leyendo el documet"
 var fruta
 var mensaje
 var userInput =prompt("ingrese el numero")
