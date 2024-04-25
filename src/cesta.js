@@ -30,8 +30,7 @@ var inicio = true
 do {
 
 
-
-    var respuesta = prompt("1. Ver elementos de la cesta \n2. Agregar una fruta a la cesta \n3.eliminar una fruta de la cesta \n4.Eliminar fruta especifica \n5.Svalir")
+    var respuesta = prompt("1. Ver elementos de la cesta \n2. Agregar una fruta a la cesta \n3.eliminar una fruta de la cesta \n4.Eliminar fruta especifica \n5.Salir")
     switch (parseInt(respuesta)) {
 
         case 1:
@@ -47,7 +46,7 @@ do {
             break
 
         case 4:
-            
+            eliminar_fruta_especifica();
             break 
             
         case 5:
