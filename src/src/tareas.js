@@ -8,7 +8,7 @@ function ver_tareas() {
 }
 
 
-function agregar_tasssrea() {
+function agregar_tarea() {
     var tarea = prompt("Ingrese nueva tarea")
     tareas.push(tarea)
 }
@@ -28,7 +28,7 @@ function eliminar_tarea() {
 
 var inicio = true
 do {
-    var respuesta = prompt("1. Ver tareas \n2. Agregue una tarea en espesifico \n3. Modificar tarea \n4. Eliminar tarea \n5. Salir")
+    var respuesta = prompt("1. Ver tareas \n2. Agregue una tarea  \n3. Modificar tarea \n4. Eliminar tarea 4n especifico \n5. Salir")
     switch (parseInt(respuesta)) {
 
         case 1:
@@ -48,11 +48,13 @@ do {
             break
 
         case 5:
-             inicio = false
-
+             inicio = prompt("Desea salir ?")
+             if (inicio == "si"){
+                inicio = true
+             }
 
 
     }
 
 
-} while (inicio == true)
+} while (inicio == false)
