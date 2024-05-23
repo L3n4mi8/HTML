@@ -31,17 +31,23 @@ function promedio() {
         suma += arreglo[i]
     }
     console.log(" El promedio es :" + suma / arreglo.length);
-    return suma / arreglo.length // retorna promedio
+    return promedio;
 }
 
-function mayorPromedio(promedio){
-    console.log(promedio)
+function mayorpromedio() {
+    let promedio = promedioArreglo();
+    let count = 0;
+    for(let i = 0; i < arreglo.length; i++) {
+        if(arreglo[i] > promedio) {
+            count++;
+        }
+    }
+    console.log("Cantidad de elementos mayores al promedio: ", count);
 }
 
 
 
-do {
-    var opcion = parseInt(prompt("1. LLenar el arreglo \n2.Promedio del arreglo \n7.Salir"))
+do {var opcion = parseInt(prompt("1. LLenar el arreglo \n2.Promedio del arreglo \n3. Promedio Mayor \n7.Salir"))
 
     switch (opcion) {
 
@@ -52,8 +58,7 @@ do {
             promedio();
         break
         case 3:
-            var promedio = promedio()
-            mayorPromedio(promedio);
+            mayorpromedio();
         break
 
 
